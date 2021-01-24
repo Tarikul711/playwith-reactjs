@@ -1,11 +1,12 @@
 function Card(props) {
     // let {name,email} = props.student
 
-    return <div>
+    return (
+        <div>
         
         {props.students.map((item,index)=>{
                 return <div>
-                    <p>{index+1}.{item.name}</p>
+                    <p>{index+1}. {item.name}</p>
                     <p>{item.email}</p>
                 </div>
         })}
@@ -13,6 +14,7 @@ function Card(props) {
 
   
     </div>
+    )
 }
 
 export default Card 
