@@ -9,10 +9,15 @@ export default function HookCard(){
     const handleDecrease = ()=>{
         setCount(count-1)
     }
+// hook as normal function..... 
+function hnadleNewInc() {
+    setCount(count+1)
+}
+
     return (
         <div>
             <p>{count}</p>
-            <button onClick={handleIncrease}>+</button>
+            <button onClick={hnadleNewInc}>+</button>
             <button onClick={handleDecrease}>-</button>
         </div>
     )

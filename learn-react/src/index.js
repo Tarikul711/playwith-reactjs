@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Card from './components/Card';
 import HookCard from './components/HookCard';
 import NavCard from './components/NavCard';
+import RegistrationForm from './components/RegistrationForm';
 import StateCard from './components/StateCard';
 let student = {
     name:"Rooh",
@@ -28,6 +29,8 @@ let studentList= [
 ]
 ReactDOM.render( 
     <div>
+        <h4>User Registration Form</h4>
+        <RegistrationForm/>
          <h4>Work on React Hook</h4>
          <HookCard/>
         <h4>Work on React State Management</h4>
