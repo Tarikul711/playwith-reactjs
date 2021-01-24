@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Card from './components/Card';
 import NavCard from './components/NavCard';
+import StateCard from './components/StateCard';
 let student = {
     name:"Rooh",
     email:'Rooh@gmail.com',
@@ -26,6 +27,8 @@ let studentList= [
 ]
 ReactDOM.render( 
     <div>
+        <h4>Work on React State Management</h4>
+        <StateCard />
         <h4>Functional Component Example</h4>
         <Card students={studentList} />
         <h4>Class Component Example</h4>
