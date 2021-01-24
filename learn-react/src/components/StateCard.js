@@ -9,18 +9,32 @@ export default class StateCard extends Component{
             newCount:8
         }
 
+        // for central binging 
+        this.handleIncrement= this.handleIncrement.bind(this)
+        this.handleDecrement = this.handleDecrement.bind(this)
     }
 
 
-          handleIncrement = () =>{
-            this.setState({
-                count : this.state.count+1
-            })
-        }
+        //   handleIncrement = () =>{
+        //     this.setState({
+        //         count : this.state.count+1
+        //     })
+        // }
 
-    // handleIncrement() {
+    handleIncrement() {
+        this.setState({
+            count: this.state.count+1
+        })
+    }
+
+    handleDecrement(){
+        this.setState({
+            count:this.state.count -1
+        })
+    }
+    // handleDecrement = () =>{
     //     this.setState({
-    //         count: this.state.count+1
+    //         count: this.state.count-1
     //     })
     // }
 
@@ -31,7 +45,7 @@ export default class StateCard extends Component{
                 <p>Work on State Management</p>
                     <button onClick={this.handleIncrement}> + </button>
                     <h5>{count}</h5>
-                    {/* <button onClick={this.handleDecrement}>-</button> */}
+                    <button onClick={this.handleDecrement}>-</button>
             </div>
         )
     }

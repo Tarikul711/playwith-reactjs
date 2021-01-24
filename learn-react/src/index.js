@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Card from './components/Card';
+import HookCard from './components/HookCard';
 import NavCard from './components/NavCard';
 import StateCard from './components/StateCard';
 let student = {
@@ -27,6 +28,8 @@ let studentList= [
 ]
 ReactDOM.render( 
     <div>
+         <h4>Work on React Hook</h4>
+         <HookCard/>
         <h4>Work on React State Management</h4>
         <StateCard />
         <h4>Functional Component Example</h4>
