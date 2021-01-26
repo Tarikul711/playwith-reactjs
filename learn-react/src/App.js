@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import BlogList from './sample_blog/BlogList';
 const App = () => {
 const [blogs, setBlogs] = useState(null) 
 
@@ -16,7 +16,7 @@ useEffect( () => {
 
     return (
         <div>
-            {/* <BlogList blogs={blogs} title = "All Blogs" /> */}
+            {blogs && <BlogList blogs={blogs} title = "All Blogs" />}
         </div>
     );
 }
