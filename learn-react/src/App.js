@@ -1,16 +1,24 @@
 import React from 'react';
-import BlogList from './sample_blog/BlogList';
-import useFetch from './sample_blog/useFetch';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import CreatePost from './sample_blog/CreatePost';
+import Home from './sample_blog/Home';
+
 
 const App = () => {
-        const {data, isPending} = useFetch('https://jsonplaceholder.typicode.com/posts')
-        
-        return (
-            <div>
-                {isPending && <div>Loading.......</div>}
-                {data && <BlogList blogs={data} title = "All Blogs" />}
-            </div>
-        );
+      return (
+          <Router>
+                <div>
+                        <Switch>
+                                <Route path="/">
+                                    <Home/>
+                                </Route>
+                                <Route path="/create">
+                                    <CreatePost/>
+                                </Route>
+                        </Switch>
+                </div>
+          </Router>
+      );
 }
 
 export default App;
